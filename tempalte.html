@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/template.js"></script>
+</head>
+<body>
+	<div class="kk">
+		
+	</div>
+</body>
+<script>
+
+let template = `
+<ul>
+<% for(let i=0; i < data.supplies.length; i++) { %>
+<li><%= data.supplies[i] %></li>
+<% } %>
+</ul>
+`;
+var data={ 
+	supplies: [ "broom", "mop", "cleaner" ] 
+  };
+	// var template=`
+	// 	<ul>
+	// 		<li>1</li>
+	// 		<li>2</li>
+	// 		<li>3</li>
+	// 	</ul>
+	// 	`;
+zkk.compile(template,".kk",data);
+
+</script>
+</html>
